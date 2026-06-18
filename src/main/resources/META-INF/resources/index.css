@@ -1,0 +1,108 @@
+
+ :root {
+     --primary: #e4002b;
+     --accent: #f8b500;
+     --dark: #111111;
+ }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    overflow-x: hidden;
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("pacceli3.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+/* Container Principal do Hero/Delivery */
+.delivery-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 20px;
+    gap: 40px;
+}
+
+/* Coluna da Esquerda: Textos e Logos */
+.delivery-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.delivery-content h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 900;
+    text-transform: uppercase;
+    margin: 0;
+    letter-spacing: -1px;
+    line-height: 1.1;
+    color: white;
+}
+
+.delivery-content p {
+    font-size: 1.2rem;
+    color: #cccccc;
+    margin: 0;
+}
+
+/* Container das Marcas de Delivery */
+.delivery-logos {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.delivery-logos img {
+    height: 45px; /* Controla a altura alinhada das logos */
+    width: auto;
+    object-fit: contain;
+}
+
+/* Coluna da Direita: Imagem de Destaque */
+.delivery-image {
+    flex: 1.2; /* Aumentado de 1 para 1.2 para dar mais espaço à foto */
+    display: flex;
+    justify-content: center;
+}
+
+.delivery-image img {
+    width: 100%;
+    max-width: 700px; /* Aumentado de 550px para 700px */
+    height: auto;
+    border-radius: 20px;
+    object-fit: cover;
+    border: 10px solid rgba(255,255,255,0.1);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+}
+
+/* Responsividade para Celulares (Mobile) */
+@media (max-width: 768px) {
+    .delivery-container {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 40px 20px;
+        gap: 30px;
+    }
+
+    .delivery-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .delivery-logos {
+        justify-content: center;
+    }
+}
+
