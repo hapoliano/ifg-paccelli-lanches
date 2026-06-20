@@ -1,9 +1,8 @@
-
- :root {
-     --primary: #e4002b;
-     --accent: #f8b500;
-     --dark: #111111;
- }
+:root {
+    --primary: #e4002b;
+    --accent: #f8b500;
+    --dark: #111111;
+}
 
 * {
     margin: 0;
@@ -21,88 +20,87 @@ body {
     background-repeat: no-repeat;
 }
 
-/* Container Principal do Hero/Delivery */
-.delivery-container {
+/* HERO SECTION */
+.hero {
+    height: calc(94vh - 80px);
+    min-height: 500px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 80px 20px;
-    gap: 40px;
-}
-
-/* Coluna da Esquerda: Textos e Logos */
-.delivery-content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.delivery-content h1 {
-    font-size: clamp(2.5rem, 5vw, 4rem);
-    font-weight: 900;
-    text-transform: uppercase;
-    margin: 0;
-    letter-spacing: -1px;
-    line-height: 1.1;
     color: white;
+    position: relative;
 }
 
-.delivery-content p {
-    font-size: 1.2rem;
-    color: #cccccc;
-    margin: 0;
-}
-
-/* Container das Marcas de Delivery */
-.delivery-logos {
-    display: flex;
+.hero-content {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
     align-items: center;
-    gap: 25px;
-    margin-top: 20px;
+}
+
+.hero-text h1 {
+    font-size: clamp(3rem, 7vw, 5.2rem);
+    line-height: 1.05;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.hero-text .highlight {
+    color: var(--accent);
+}
+
+.hero-text p {
+    font-size: 1.35rem;
+    max-width: 460px;
+    margin-bottom: 40px;
+    opacity: 0.95;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 18px;
     flex-wrap: wrap;
 }
 
-.delivery-logos img {
-    height: 45px; /* Controla a altura alinhada das logos */
-    width: auto;
-    object-fit: contain;
+.hero-buttons button {
+    padding: 18px 36px;
+    font-size: 18px;
+    border-radius: 50px;
 }
 
-/* Coluna da Direita: Imagem de Destaque */
-.delivery-image {
-    flex: 1.2; /* Aumentado de 1 para 1.2 para dar mais espaço à foto */
-    display: flex;
-    justify-content: center;
+.hero-image {
+    text-align: center;
 }
 
-.delivery-image img {
+.hero-image img {
     width: 100%;
-    max-width: 700px; /* Aumentado de 550px para 700px */
-    height: auto;
-    border-radius: 20px;
-    object-fit: cover;
-    border: 10px solid rgba(255,255,255,0.1);
-    box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+    max-width: 460px;
+    border-radius: 30px;
+    border: 14px solid rgba(255,255,255,0.9);
+    box-shadow: 0 30px 70px rgba(0,0,0,0.5);
+    animation: float 3.5s ease-in-out infinite;
 }
 
-/* Responsividade para Celulares (Mobile) */
+/* RESPONSIVIDADE PARA DISPOSITIVOS MÓVEIS */
 @media (max-width: 768px) {
-    .delivery-container {
-        flex-direction: column-reverse;
+    .hero {
+        height: auto;
+        padding: 60px 20px;
+    }
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
         text-align: center;
-        padding: 40px 20px;
-        gap: 30px;
     }
-
-    .delivery-content h1 {
-        font-size: 2.2rem;
+    .hero-text p {
+        margin: 0 auto 30px auto;
     }
-
-    .delivery-logos {
+    .hero-buttons {
         justify-content: center;
     }
+    .hero-image img {
+        max-width: 320px;
+    }
 }
-

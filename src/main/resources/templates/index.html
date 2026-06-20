@@ -6,35 +6,39 @@
     <title>Paccelli Lanches • O Rei do Hambúrguer</title>
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="index.css">
-
 </head>
 <body>
 
 {#include navbar /}
 
-<!-- HERO / DELIVERY -->
-<section class="delivery-container">
+<!-- HERO / PÁGINA INICIAL -->
+<section class="hero">
+    <div class="hero-content">
+        <div class="hero-text">
+            <h1>O MELHOR HAMBÚRGUER<br>DA CIDADE</h1>
+            <p>Sabor explosivo, ingredientes frescos e entrega em menos de 30 minutos.</p>
 
-    <!-- Coluna de Conteúdo (Esquerda) -->
-    <div class="delivery-content">
-        <h1>O MELHOR HAMBÚRGUER</h1>
-        <p>Sabor explosivo, ingredientes frescos e entrega em menos de 30 minutos.</p>
+            <div class="hero-buttons">
+                <button onclick="alert('Redirecionando para o cardápio... (em breve)')" class="btn-primary">
+                    Ver Cardápio Completo
+                </button>
+                <button onclick="openWhatsApp()" class="btn-primary" style="background: #25D366;">
+                    📲 Pedir pelo WhatsApp
+                </button>
+            </div>
+        </div>
 
-        <!-- Logos dos Apps -->
-        <div class="delivery-logos">
-            <img src="https://logopng.com.br/logos/ifood-43.png" alt="iFood" style="height: 40px;">
-            <button onclick="openWhatsApp()" class="btn-primary" style="background: #25D366; padding: 10px 25px;">
-                📲 WhatsApp
-            </button>
+        <div class="hero-image">
+            <img src="pacceli2.jpg" alt="Delicioso Hambúrguer Paccelli">
         </div>
     </div>
-
-    <!-- Coluna da Foto (Direita) -->
-    <div class="delivery-image">
-        <img src="pacceli2.jpg" alt="Delicioso Hambúrguer Paccelli">
-    </div>
-
 </section>
 
+{#include footer /}
+
+<script>
+    // Mensagem no console indicando carregamento da página
+    console.log("%c✅ Página Inicial do Paccelli Lanches carregada com sucesso!", "color:#e4002b; font-size:16px; font-weight:bold");
+</script>
 </body>
 </html>

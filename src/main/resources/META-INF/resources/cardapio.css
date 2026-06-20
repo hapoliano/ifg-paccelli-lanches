@@ -1,6 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #1a1a1a, #2c1e16);
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("pacceli3.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
     color: #fff;
     margin: 0;
     padding: 0;
@@ -63,12 +73,7 @@ h2 {
     font-size: 0.9rem;
     margin: 10px 0;
 }
-footer {
-    text-align: center;
-    padding: 30px;
-    background: rgba(0,0,0,0.8);
-    margin-top: 50px;
-}
+
 .whatsapp {
     position: fixed;
     bottom: 20px;
