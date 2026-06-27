@@ -69,7 +69,7 @@ body {
     color: #00ff88;
 }
 .economia {
-    background: #ff4d4d;
+    background: var(--primary);
     color: white;
     padding: 5px 15px;
     border-radius: 30px;
@@ -78,14 +78,19 @@ body {
     font-weight: 600;
 }
 h2 {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
     text-align: center;
-    color: #ffcc00;
-    font-size: 2.5rem;
-    margin: 40px 0 20px;
+    color: var(--accent);
+    font-weight: 800;
+    font-size: 2.2rem;
+    border-bottom: 3px solid var(--primary);
+    padding-bottom: 10px;
+    margin: 40px auto 20px auto;
+    max-width: fit-content;
 }
 .validade {
     text-align: center;
-    color: #ffcc00;
+    color: var(--accent);
     font-size: 1.1rem;
     margin-top: 40px;
     font-weight: 500;
